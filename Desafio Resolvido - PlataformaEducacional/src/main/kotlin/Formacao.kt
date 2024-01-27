@@ -3,11 +3,13 @@ data class Formacao(var nome: String, var conteudos: List<ConteudoEducacional>) 
 
     fun matricular(usuario: Usuario) {
         inscritos.add(usuario)
-        println("Usuário $usuario matriculado com sucesso!")
+        usuario.incluiFormacaoNaLista(this)
+        println("Usuário ${usuario.nome} matriculado com sucesso na formacao $nome!")
     }
 
     fun desmatricular(usuario: Usuario) {
         inscritos.remove(usuario)
-        println("Usuário $usuario desmatriculado com sucesso!")
+        println("Usuário {${usuario.nome}} desmatriculado com sucesso!")
     }
+
 }
