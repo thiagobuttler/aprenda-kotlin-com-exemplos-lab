@@ -10,9 +10,9 @@ fun main() {
 
     val taylor = Usuario("Taylor")
 
-    formacaoKotlin.matricular(taylor)
+    taylor.matricular(formacaoJava)
 
-    formacaoJava.matricular(taylor)
+    taylor.matricular(formacaoKotlin)
 
     taylor.ExibeInformacoesDoUsuario()
 
